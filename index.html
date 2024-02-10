@@ -1,0 +1,40 @@
+<!--
+Политехнический колледж городского хозяйства
+МДК.08.01 Проектирование и разработка интерфейсов пользователей
+Практическая работа №20
+Студент гр. ИР-21-4
+Назаров И.А.
+Преподаватель Левит Л.В., Л.В. Ильюшенков
+-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Практическая работа №20</title>
+    <link rel="stylesheet" href="jquery-ui-1.13.2/jquery-ui.min.css">
+        <link rel="stylesheet" href="style.css">
+    <script src="jquery-ui-1.13.2/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <h1>Автовокзалы</h1>
+    <form class="center">
+        <label for="departure_city">Станция отправления:</label>
+        <input type="text" id="departure_city">
+        <br>
+        <label for="departure_station">Автовокзал отправления:</label>
+        <select id="departure_station"></select>
+        <br>
+        <label for="arrival_city">Станция прибытия:</label>
+        <input type="text" id="arrival_city">
+        <br>
+        <label for="arrival_station">Автовокзал прибытия:</label>
+        <select id="arrival_station"></select>
+        <br>
+        <input type="submit" value="Найти">
+    </form>
+</body>
+
+</html>
