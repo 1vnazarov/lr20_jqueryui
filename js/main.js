@@ -1,4 +1,8 @@
-$(function() {
+$(function () {
+    $("input[type='submit']").button();
+    $("label").addClass("ui-widget");
+    $("select").selectmenu();
+    $("input[type='text']").addClass("ui-widget ui-widget-content");
     const cities = ["Москва", "Волгоград", "Псков", "Гдов", "Пестово", "Санкт-Петербург", "Саратов", "Тверь"];
     $("#departure_city").autocomplete({ source: cities });
     $("#arrival_city").autocomplete({ source: cities });
@@ -14,7 +18,7 @@ $(function() {
                 console.log(stationSelect, data.data);
                 stationSelect.empty();
                 for (const station of data) {
-                    stationSelect.append(`<option value="${station.code}">${station.name}</option>`);
+                    stationSelect.append($(new Option(station.name, station.code)));
                 }
             },
         });
