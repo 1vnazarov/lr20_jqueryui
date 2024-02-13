@@ -15,11 +15,12 @@ $(function () {
             success: function (data) {
                 data = data.data.items;
                 const stationSelect = $(`#${$(obj).attr("id").replace("city", "station")}`);
-                console.log(stationSelect, data.data);
                 stationSelect.empty();
+                if (data.length == 0) stationSelect.append($(new Option("Выберите вокзал")))
                 for (const station of data) {
                     stationSelect.append($(new Option(station.name, station.code)));
                 }
+                $("select").selectmenu("refresh");
             },
         });
     });
